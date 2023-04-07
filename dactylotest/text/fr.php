@@ -9,7 +9,14 @@ Les textes doivent comporter :
 
 //$textes[0]["txt"] = "";
 //$textes[0]["source"] = "";
-
+$fp = fopen('txt\lesmiserables.txt', 'r');
+if ($fp) {
+    while (($line = fgets($fp)) !== false) {
+        echo $line;
+    }
+    fclose($fp);
+}
+/*
 $textes[0]["txt"] = "Au XVIIIe siècle, l’étude des insectes est devenue un sujet à la mode suite aux travaux de grands scientifiques, notamment ceux de Réaumur. Au XIXe siècle, il était de bon ton de posséder des collections naturalistes, notamment d’insectes, principalement des papillons et des coléoptères. Mais la découverte d’un nombre toujours plus grand d’espèces et la complexification des connaissances conduit, à partir du début du XXe siècle, à la quasi-disparition de cette pratique. Bien sûr, d’autres facteurs, comme l’évolution de la na…";
 $textes[0]["source"] = "http://fr.wikipedia.org/wiki/Entomologie";
 $textes[1]["txt"] = "La populiculture est le nom donné à diverses sortes de culture des peuplements artificiels de peupliers. Leur gestionnaire est dit populiculteur. Les propriétaires ou gestionnaires de canaux (dont VNF en France) louent parfois leurs berges ou abords à des populiculteurs. Ces arbres, typiques des paysages de canaux servaient notamment autrefois à la production d’allumettes. La conduite des peuplements artificiels de peupliers est à la frange de l’agriculture et de la sylviculture. Pour doper leur croissance, ils sont parfois …";
@@ -276,5 +283,5 @@ $textes[130]["source"] = "http://fr.wikisource.org/wiki/Le_Rhin/Conclusion/XV";
 
 $textes[131]["txt"] = "Posez vos doigts sur la « rangée de repos ». Vous sentez les picots sous vos index ? Bien. Vos doigts sont bien placés. À l’aide d’un « pense-bête » téléchargé et imprimé, aidez-vous pour trouver les nouveaux emplacements de vos touches. Le mot clef pour les exercices est « patience ». Prenez votre temps, visez l’efficacité plutôt que la vitesse. La vitesse, vous l’acquerrez avec le temps. Pour le moment, laissez juste chacun de vos doigts découvrir son nouveau domaine, ses nouvelles touches. Soyez patients et réguliers dans vos exercices et la vitesse viendra d’elle-même, comme une récompense.";
 $textes[131]["source"] = "";
-
+*/
 ?>
